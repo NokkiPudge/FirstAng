@@ -1,4 +1,5 @@
 import { Component, Input,Output,EventEmitter} from '@angular/core';
+import {CardComponent} from "../share/card/card.component";
 
 interface User {
   name: string,
@@ -11,6 +12,9 @@ interface User {
   standalone: true,
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
+  imports: [
+    CardComponent
+  ]
 })
 export class UserComponent {
 @Input({required:true}) user!:User;
